@@ -30,9 +30,24 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/font-awesome.min.css",
+              "src/assets/css/linearicons.css",
+              "src/assets/css/animate.css",
+              "src/assets/css/owl.carousel.min.css",
+              "src/assets/css/owl.theme.default.min.css",
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/bootsnav.css",
+              "src/assets/css/style.css",
+              "src/assets/css/responsive.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/bootsnav.js",
+              "src/assets/js/owl.carousel.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
