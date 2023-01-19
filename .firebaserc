@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sheba-5459b": {
+      "hosting": {
+        "Sheba": [
+          "sheba-5459b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sheba-5459b"
+  }
+}

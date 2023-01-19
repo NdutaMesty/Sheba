@@ -1,5 +1,7 @@
 $(document).ready(function(){
 	"use strict";
+
+	console.log('WORKINND')
     
         /*==================================
 * Author        : "ThemeSine"
@@ -16,7 +18,6 @@ $(document).ready(function(){
 3. welcome animation support
 4. cart close
 ======================================*/
-
     // 1. Scroll To Top 
 		$(window).on('scroll',function () {
 			if ($(this).scrollTop() > 600) {

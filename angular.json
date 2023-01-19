@@ -112,6 +112,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "Sheba:build:production",
+            "firebaseProject": "sheba-5459b",
+            "firebaseHostingSite": "sheba-5459b"
+          }
         }
       }
     }
