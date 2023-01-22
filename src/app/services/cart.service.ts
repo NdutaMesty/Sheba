@@ -12,13 +12,13 @@ export class CartService {
   private _totalPrice$ = new BehaviorSubject<number>(0);
   public myData$ = this._myData$.asObservable()
   public totalPrice$ = this._totalPrice$.asObservable();
-  
+
   constructor(private localStorageServie: LocalStorageService) { }
 
   getCartProducts() {
     const products = JSON.parse(this.localStorageServie.getLocalStorageItem(PRODUCTS_LOCAL_STORAGE_KEY) || '[]');
     this._myData$.next(products);
-    this._totalPrice$.next(products.reduce((acc: number, val: Product) => acc + val.unitPrice , 0));
+    this._totalPrice$.next(products.reduce((acc: number, val: Product) => acc + val.price , 0));
     return products;
   }
 
@@ -27,7 +27,7 @@ export class CartService {
     const newProducts = [...products, product];
     this.saveCartProducts(newProducts);
     this._myData$.next(newProducts);
-    this._totalPrice$.next(newProducts.reduce((acc: number, val: Product) => acc + val.unitPrice , 0));
+    this._totalPrice$.next(newProducts.reduce((acc: number, val: Product) => acc + val.price , 0));
   }
 
   removeProductFromCart(index: number) {
@@ -36,7 +36,7 @@ export class CartService {
     const newProducts = [...products];
     this.saveCartProducts(newProducts);
     this._myData$.next(newProducts);
-    this._totalPrice$.next(newProducts.reduce((acc: number, val: Product) => acc + val.unitPrice , 0));
+    this._totalPrice$.next(newProducts.reduce((acc: number, val: Product) => acc + val.price , 0));
   }
 
   saveCartProducts(products: Product[]) {

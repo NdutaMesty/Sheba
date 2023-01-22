@@ -16,7 +16,7 @@ export class ProductsComponent {
   private productsCollection: AngularFirestoreCollection<Product>;
 
   constructor(private afs: AngularFirestore, private cartService: CartService) {
-    this.productsCollection = afs.collection<Product>('products');
+    this.productsCollection = afs.collection<Product>('sheba_products');
     this.products = this.productsCollection.valueChanges({ idField: 'id'});
 
   }

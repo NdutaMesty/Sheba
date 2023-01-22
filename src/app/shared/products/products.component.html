@@ -9,7 +9,7 @@
         <div *ngFor="let product of products | async" class="col-md-3 col-sm-4" data-toggle="modal" data-target="#exampleModal">
           <div class="single-new-arrival">
             <div class="single-new-arrival-bg">
-              <img src="{{product.imageUrl}}" alt="new-arrivals images">
+              <img src="{{product.imageUrl}}" alt="new-arrivals images" class="product_image">
               <div class="single-new-arrival-bg-overlay"></div>
               <div class="sale bg-1">
                 <p>sale</p>
@@ -26,12 +26,12 @@
               </div>
             </div>
             <h4><a href="#">{{product.title}}</a></h4>
-            <p class="arrival-product-price">GHC {{product.unitPrice}}</p>
+            <p class="arrival-product-price">GHC {{product.price}}</p>
           </div>
         </div>
 
 
-        <div class="col-md-3 col-sm-4">
+        <!-- <div class="col-md-3 col-sm-4">
           <div class="single-new-arrival">
             <div class="single-new-arrival-bg">
               <img src="assets/images/collection/arrivals1.png" alt="new-arrivals images">
@@ -53,8 +53,8 @@
             <h4><a href="#">Mint Infused Shea Butter</a></h4>
             <p class="arrival-product-price">GHC 30.00</p>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-4">
+        </div> -->
+        <!-- <div class="col-md-3 col-sm-4">
           <div class="single-new-arrival">
             <div class="single-new-arrival-bg">
               <img src="assets/images/collection/arrivals2.png" alt="new-arrivals images">
@@ -72,7 +72,7 @@
                   <span class="lnr lnr-frame-expand"></span>
                 </p>
               </div>
-            </div>
+            </div> -->
             <!-- <h4><a href="#">Euca Shea Butter</a></h4>
             <p class="arrival-product-price">GHC 30.00</p>
           </div>
@@ -93,11 +93,11 @@
                 </p>
               </div>
             </div> -->
-            <h4><a href="#">Cocoa Butter</a></h4>
+            <!-- <h4><a href="#">Cocoa Butter</a></h4>
             <p class="arrival-product-price">GHC 30.00</p>
           </div>
-        </div>
-        <div class="col-md-3 col-sm-4">
+        </div> -->
+        <!-- <div class="col-md-3 col-sm-4">
           <div class="single-new-arrival">
             <div class="single-new-arrival-bg">
               <img src="assets/images/collection/arrivals4.png" alt="new-arrivals images">
@@ -115,7 +115,7 @@
                   <span class="lnr lnr-frame-expand"></span>
                 </p>
               </div>
-            </div>
+            </div> -->
             <!-- <h4><a href="#">Vanilla Infused Shea Butter</a></h4>
             <p class="arrival-product-price">GHC 30.00</p>
           </div>
@@ -159,11 +159,11 @@
                 </p>
               </div>
             </div>le -->
-            <h4><a href="#">Honey Infused Shea Butter</a></h4>
-            <p class="arrival-product-price">GHC 30.00</p>
+            <!-- <h4><a href="#">Honey Infused Shea Butter</a></h4>
+            <p class="arrival-product-price">GHC 30.00</p> -->
           </div>
         </div>
-        <div class="col-md-3 col-sm-4">
+        <!-- <div class="col-md-3 col-sm-4">
           <div class="single-new-arrival">
             <div class="single-new-arrival-bg">
               <img src="assets/images/collection/arrivals7.png" alt="new-arrivals images">
@@ -181,7 +181,7 @@
                   <span class="lnr lnr-frame-expand"></span>
                 </p>
               </div>
-            </div>
+            </div> -->
             <!-- <h4><a href="#">arm chair</a></h4>
             <p class="arrival-product-price">$90.00</p>
           </div>
@@ -205,15 +205,12 @@
             <!-- <h4><a href="#">Original Shea Butter</a></h4>
             <p class="arrival-product-price">GHC 30.00</p> -->
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
+        <!-- </div>
+      </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
 </section>
 
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
 <div class="modal fade bd-example-modal-xl" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-xl">
