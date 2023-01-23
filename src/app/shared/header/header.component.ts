@@ -18,7 +18,6 @@ export class HeaderComponent implements OnInit {
   }
 
   removeCartItem(index: number) {
-    console.log('here');
     this.cartService.removeProductFromCart(index);
   }
 
