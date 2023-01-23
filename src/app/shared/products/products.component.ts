@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/compat/firestore';
 import { Observable } from 'rxjs';
 import { CartService } from 'src/app/services/cart.service';
+import { ToastrService } from 'ngx-toastr';
 
 import { Product } from '../../models/product';
 
@@ -15,7 +16,11 @@ export class ProductsComponent {
   products: Observable<Product[]>;
   private productsCollection: AngularFirestoreCollection<Product>;
 
-  constructor(private afs: AngularFirestore, private cartService: CartService) {
+  constructor(
+    private afs: AngularFirestore,
+    private cartService: CartService,
+    private toastr: ToastrService
+  ) {
     this.productsCollection = afs.collection<Product>('sheba_products');
     this.products = this.productsCollection.valueChanges({ idField: 'id'});
 
@@ -26,6 +31,7 @@ export class ProductsComponent {
       return;
     }
     this.cartService.addProductToCart(product);
+    this.toastr.success(`${product.title} has been added to cart.`)
   }
 
   clickProduct(product: Product) {
