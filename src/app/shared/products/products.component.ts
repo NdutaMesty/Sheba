@@ -11,7 +11,7 @@ import { Product } from '../../models/product';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  selectedProduct: Observable<Product | undefined> | undefined;
+  selectedProduct: Product | undefined;
   products: Observable<Product[]>;
   private productsCollection: AngularFirestoreCollection<Product>;
 
@@ -21,11 +21,15 @@ export class ProductsComponent {
 
   }
 
-  addProductToCart(product: Product) {
+  addProductToCart(product: Product | undefined) {
+    if (!product) {
+      return;
+    }
     this.cartService.addProductToCart(product);
   }
 
-  clickProduct(uid: string) {
-    this.selectedProduct = this.productsCollection.doc(uid).valueChanges();
+  clickProduct(product: Product) {
+    this.selectedProduct = product
+    console.log(product);
   }
 }
